@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobin K Jose | Marketing & Growth</title>
+<style>
+:root{--bg:#080d12;--panel:#101922;--line:#263744;--text:#edf3f5;--muted:#a4b4be;--accent:#b7f36b;--blue:#70c9e8;--gold:#f1c76a}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 88% 0%,#172b27 0,transparent 35%),radial-gradient(ellipse at 0% 55%,#10202a 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.58 "Inter","Segoe UI",Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.16;background-image:linear-gradient(#8ba3ad12 1px,transparent 1px),linear-gradient(90deg,#8ba3ad12 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+a{color:inherit;text-decoration:none}
+.sheet{max-width:1050px;margin:auto;padding:38px 36px 30px;position:relative}
+.sheet:before{content:"";position:absolute;top:0;left:36px;right:36px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--blue),transparent);background-size:200% 100%;animation:shimmer 7s linear infinite}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:22px;border-bottom:1px solid var(--line);padding-bottom:25px;position:relative}
+.kicker,.label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--accent)}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.03;letter-spacing:-.06em;margin:10px 0 8px;text-shadow:0 0 32px #b7f36b12}
+.subtitle{font-size:16px;color:#c3cdd2;margin:0}
+.contact{font-size:12px;color:var(--muted);line-height:1.9;text-align:right;padding-top:8px}
+.summary{font-size:14px;color:#c5d0d5;max-width:800px;margin:20px 0 24px;padding-left:15px;border-left:2px solid var(--accent)}
+.banner{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:30px}
+.banner div{border:1px solid var(--line);background:linear-gradient(145deg,#111c23dd,#0e151bdd);padding:15px 16px;border-radius:11px;position:relative;overflow:hidden;transition:transform .25s,border-color .25s,background .25s}.banner div:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:34%;background:var(--accent);transition:width .3s}.banner div:hover{transform:translateY(-3px);border-color:#536b57}.banner div:hover:after{width:100%}
+.banner strong{display:block;font-size:12px;color:var(--accent);margin-bottom:3px}
+.banner span{display:block;color:var(--muted);font-size:11px}
+.columns{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(245px,.8fr);gap:28px}
+section{margin-bottom:27px}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 14px;display:flex;gap:10px;align-items:center;color:#f0f5f5}
+h2:after{content:"";height:1px;background:linear-gradient(90deg,var(--line),transparent);flex:1}
+.job,.project,.sidebox{border:1px solid var(--line);background:linear-gradient(145deg,#121c24f2,#0d151cf5);border-radius:12px;padding:16px 17px;margin-bottom:11px;break-inside:avoid;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}.job:before,.project:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),transparent);opacity:.6}.job:hover,.project:hover{transform:translateY(-3px);border-color:#455c4b;box-shadow:0 12px 28px #00000025}
+.jobhead{display:flex;justify-content:space-between;gap:12px}
+h3{font-size:15px;margin:0 0 3px}
+.org{font-size:12px;color:var(--accent);font-weight:700}
+.date{font-size:11px;color:var(--muted);white-space:nowrap}
+ul{margin:10px 0 0;padding-left:18px;color:#c3cdd2;font-size:12.5px}
+li{margin:5px 0;padding-left:2px}
+li::marker{color:var(--accent)}
+.projecttype{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:800}
+.project p{font-size:12.5px;color:#c3cdd2;margin:7px 0 0}
+.sidebox p{font-size:12.5px;color:#c3cdd2;margin:0}
+.skill{margin-bottom:13px}
+.skill strong{display:block;color:var(--text);font-size:12px;margin-bottom:3px}
+.skill span{font-size:12px;color:#bdc9cf}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tag{font-size:10px;color:#d7e1e5;border:1px solid #35464f;background:#14212a66;border-radius:5px;padding:4px 7px;transition:all .2s}.tag:hover{border-color:var(--accent);color:var(--accent)}
+.education-title{font-size:13px;font-weight:700}
+.education-sub{font-size:12px;color:var(--muted);margin-top:3px}
+footer{border-top:1px solid var(--line);padding-top:15px;display:flex;justify-content:space-between;gap:15px;color:#81919a;font-size:10px;letter-spacing:.06em}
+.print{border:1px solid #5a7049;background:#17231b;color:var(--accent);padding:8px 11px;border-radius:7px;cursor:pointer;font-size:11px}
+@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
+@keyframes drift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-8px,0)}}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+header,.summary,.banner,section{animation:appear .7s both}
+.summary{animation-delay:.08s}.banner{animation-delay:.14s}
+.columns section:nth-child(1){animation-delay:.18s}.columns section:nth-child(2){animation-delay:.24s}.columns section:nth-child(3){animation-delay:.30s}
+.kicker:before{content:"";display:inline-block;width:19px;height:2px;background:var(--accent);vertical-align:middle;margin-right:9px;box-shadow:0 0 12px #b7f36b55}
+.contact a{transition:color .2s}.contact a:hover{color:var(--accent)}
+.sidebox{background:linear-gradient(145deg,#121c24f2,#0c141bf5)}
+.education-title{color:var(--accent)}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:700px){.sheet{padding:22px 16px}header{display:block}.contact{text-align:left;margin-top:13px}.columns{grid-template-columns:1fr}.banner{grid-template-columns:1fr}.jobhead{display:block}.date{margin-top:5px}footer{display:block}footer span{display:block;margin-top:6px}}
+@media print{body{background:var(--bg)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}header,.summary,.banner,section{animation:none!important}.job:hover,.project:hover,.banner div:hover{transform:none;box-shadow:none}.sheet{padding:18px;max-width:none}.print{display:none}.job,.project,.sidebox{padding:12px;margin-bottom:8px}section{margin-bottom:18px}.columns{gap:18px}}
+</style>
+</head>
+<body>
+<div class="sheet">
+<header>
+  <div>
+    <div class="kicker">Marketing · Growth · Financial Markets</div>
+    <h1>JOBIN K JOSE</h1>
+    <p class="subtitle">Marketing, Sales & Digital Growth Professional</p>
+  </div>
+  <div class="contact">
+    <div>Pathanamthitta, Kerala, India</div>
+    <div><a href="tel:+918301011760">+91 8301011760</a></div>
+    <div><a href="mailto:jobinkj842@gmail.com">jobinkj842@gmail.com</a></div>
+    <div style="margin-top:8px"><button class="print" onclick="window.print()">Print / Save as PDF</button></div>
+  </div>
+</header>
+
+<p class="summary">Sales and digital-marketing professional with experience in customer relationships, lead handling, content operations, and sales conversion. Active in Forex/CFD and futures markets since 2022, with a practical understanding of trader behaviour, risk management, and the prop-firm ecosystem. Interested in building clear, trustworthy marketing that connects audience needs with measurable business outcomes.</p>
+
+<div class="banner">
+  <div><strong>Marketing & Sales</strong><span>Lead handling, follow-up, conversion and customer relationships</span></div>
+  <div><strong>Financial Markets</strong><span>Forex/CFD, futures, technical analysis and risk management</span></div>
+  <div><strong>Digital Products</strong><span>Product concepts, AI-assisted workflows and technical experimentation</span></div>
+</div>
+
+<div class="columns">
+<main>
+<section>
+<h2>Professional Experience</h2>
+<article class="job">
+  <div class="jobhead"><div><h3>Social Media, Sales & Lead Nurturing</h3><div class="org">JR Studio Education & Media LLP</div></div><div class="date">Aug 2026 – Present</div></div>
+  <ul>
+    <li>Support social-media, content, and sales activities across the JR Studio brand and its associated channels.</li>
+    <li>Manage leads generated through downloadable resources and social content, following up with prospective customers and supporting conversion.</li>
+    <li>Assist with email campaigns, lead and conversion tracking, content calendars, and audience engagement.</li>
+    <li>Contribute to sales conversations and customer communication for educational products.</li>
+    <li>Use digital and AI-assisted tools to streamline research, creative production, and repeatable marketing tasks.</li>
+  </ul>
+</article>
+<article class="job">
+  <div class="jobhead"><div><h3>Sales Executive</h3><div class="org">Orofin Tech Solutions LLP</div></div><div class="date">2025 – 2026</div></div>
+  <ul>
+    <li>Recognized as a consistent top-performing sales professional and regularly exceeded sales and acquisition targets.</li>
+    <li>Managed the sales lifecycle from lead qualification and customer follow-up to objection handling and closure.</li>
+    <li>Built trust-based client relationships and maintained accurate sales records and reporting.</li>
+  </ul>
+</article>
+<article class="job">
+  <div class="jobhead"><div><h3>Customer Relationship Manager</h3><div class="org">Crystal Kolors</div></div><div class="date">2024 – 2025</div></div>
+  <ul>
+    <li>Managed customer communication, order processing, service issues, and coordination with design and production teams.</li>
+    <li>Helped maintain customer satisfaction through responsive updates, accuracy, and timely delivery coordination.</li>
+  </ul>
+</article>
+<article class="job">
+  <div class="jobhead"><div><h3>Cashier</h3><div class="org">Reliance Retail</div></div><div class="date">2023 – 2024</div></div>
+  <ul>
+    <li>Processed cash and digital payments, reconciled register records, assisted with inventory checks, and handled customer queries.</li>
+  </ul>
+</article>
+</section>
+
+<section>
+<h2>Trading & Financial Markets</h2>
+<article class="job">
+  <div class="jobhead"><div><h3>Independent Forex/CFD & Futures Trader</h3><div class="org">Independent</div></div><div class="date">2022 – Present</div></div>
+  <ul>
+    <li>Study and trade Forex/CFD and futures markets using technical analysis, price action, and market-structure concepts.</li>
+    <li>Apply position sizing, stop-loss planning, risk-to-reward analysis, and structured trade reviews to manage risk.</li>
+    <li>Review trade records and performance metrics to identify execution errors and improve consistency.</li>
+    <li>Develop a practical understanding of trader needs, prop-firm rules, drawdown limits, trading psychology, and the importance of trust in financial services.</li>
+  </ul>
+</article>
+</section>
+
+<section>
+<h2>Projects</h2>
+<article class="project">
+  <div class="projecttype">Trading & Analytics Product</div>
+  <h3>METRIC Trade Journal</h3>
+  <p>A trading-journal project focused on trade records, P&L, drawdown, performance analysis, and risk metrics. The product direction is built around helping traders review their execution and understand their trading behaviour.</p>
+</article>
+<article class="project">
+  <div class="projecttype">Copy-Trading Platform</div>
+  <h3>Green Signal</h3>
+  <p>A platform concept for copy trading, where strategy providers can list their trading strategies and other users can discover and choose strategies to copy.</p>
+</article>
+<article class="project">
+  <div class="projecttype">Psychology & Wellbeing Platform</div>
+  <h3>Listen Up</h3>
+  <p>A platform concept designed to connect users with psychologists and provide a space for users to communicate with one another.</p>
+</article>
+</section>
+</main>
+
+<aside>
+<section>
+<h2>Core Skills</h2>
+<div class="sidebox">
+  <div class="skill"><strong>Marketing & Sales</strong><span>Lead generation, customer communication, follow-up, sales conversion, content planning, campaign support.</span></div>
+  <div class="skill"><strong>Audience & Community</strong><span>Social-media operations, audience engagement, educational content, customer relationships.</span></div>
+  <div class="skill"><strong>Analysis & Reporting</strong><span>Lead tracking, campaign records, performance review, structured problem-solving.</span></div>
+  <div class="skill"><strong>Trading Knowledge</strong><span>Forex/CFD, futures, technical analysis, risk management, trading psychology.</span></div>
+</div>
+</section>
+
+<section>
+<h2>Digital & AI Tools</h2>
+<div class="sidebox">
+  <p>Practical use of digital tools to support research, content development, creative workflows, and product experimentation.</p>
+  <div class="tags">
+    <span class="tag">ChatGPT</span><span class="tag">Ollama / LLaVA</span><span class="tag">Canva</span><span class="tag">CapCut</span><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Python workflow basics</span><span class="tag">Google Sheets</span><span class="tag">Email campaigns</span>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Education</h2>
+<div class="sidebox">
+  <div class="education-title">Bachelor of Commerce</div>
+  <div class="education-sub">Indira Gandhi National Open University (IGNOU)</div>
+</div>
+</section>
+
+<section>
+<h2>Professional Strengths</h2>
+<div class="sidebox">
+  <ul style="margin-top:0">
+    <li>Commercial awareness and customer focus</li>
+    <li>Clear communication and relationship building</li>
+    <li>Structured, risk-aware decision-making</li>
+    <li>Fast learning and practical problem-solving</li>
+    <li>Interest in technology and product development</li>
+  </ul>
+</div>
+</section>
+
+<section>
+<h2>Role Focus</h2>
+<div class="sidebox">
+  <p>Marketing and growth opportunities in the financial-markets industry, combining trader perspective with sales experience, digital execution, and product thinking.</p>
+</div>
+</section>
+</aside>
+</div>
+<footer><span>JOBIN K JOSE · PROFESSIONAL RESUME</span><span>Marketing · Growth · Financial Markets</span></footer>
+</div>
+</body>
+</html>
